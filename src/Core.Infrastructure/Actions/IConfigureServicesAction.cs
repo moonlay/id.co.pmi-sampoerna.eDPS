@@ -26,6 +26,6 @@ namespace ExtCore.Infrastructure.Actions
         /// <param name="serviceProvider">
         /// Will be provided by the ExtCore and might be used to get any service that is registered inside the DI at this moment.
         /// </param>
-        void Execute(ContainerBuilder serviceCollection, IServiceProvider serviceProvider);
+        void Execute(ContainerBuilder serviceCollection, IContainer serviceProvider);
     }
 }

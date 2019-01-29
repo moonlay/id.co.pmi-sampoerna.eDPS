@@ -1,6 +1,7 @@
 ﻿// Copyright © 2017 Dmitry Sikorsky. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using Autofac;
 using Owin;
 using System;
 
@@ -26,6 +27,6 @@ namespace ExtCore.Infrastructure.Actions
         /// <param name="serviceProvider">
         /// Will be provided by the ExtCore and might be used to get any service that is registered inside the DI at this moment.
         /// </param>
-        void Execute(IAppBuilder applicationBuilder, IServiceProvider serviceProvider);
+        void Execute(IAppBuilder applicationBuilder, IContainer serviceProvider);
     }
 }
