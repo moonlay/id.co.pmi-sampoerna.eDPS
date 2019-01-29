@@ -68,7 +68,7 @@
             MarkRemoved();
         }
 
-        public IReadOnlyCollection<INotification> DomainEvents => _domainEvents?.AsReadOnly();
+        public IReadOnlyCollection<INotification> DomainEvents { get { return _domainEvents.AsReadOnly(); } }
 
         public void AddDomainEvent(INotification eventItem)
         {
@@ -78,12 +78,12 @@
 
         public void RemoveDomainEvent(INotification eventItem)
         {
-            _domainEvents?.Remove(eventItem);
+            _domainEvents.Remove(eventItem);
         }
 
         public void ClearDomainEvents()
         {
-            _domainEvents?.Clear();
+            _domainEvents.Clear();
         }
 
         public override bool Equals(object obj)

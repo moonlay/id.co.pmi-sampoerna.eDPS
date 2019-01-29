@@ -12,9 +12,9 @@ namespace Core.Domain
             _requestId = requestId;
         }
 
-        public bool Success { get; }
+        public bool Success { get; private set; }
 
-        public string Message { get; }
+        public string Message { get; private set; }
 
         private string _requestId;
 
@@ -23,11 +23,12 @@ namespace Core.Domain
 
     public class GenericResponse<T> : GenericResponse
     {
-        public GenericResponse(bool success, T data, string message = null, string requestId = null) : base(success, message, requestId)
+        public GenericResponse(bool success, T data, string message = null, string requestId = null)
+            : base(success, message, requestId)
         {
             Data = data;
         }
 
-        public T Data { get; }
+        public T Data { get; private set; }
     }
 }

@@ -4,11 +4,13 @@ namespace System.Collections.Generic
 {
     public class ListX<T> : List<T>
     {
-        public ListX() : base()
+        public ListX()
+            : base()
         {
         }
 
-        public ListX(IEnumerable<T> collection) : base(collection)
+        public ListX(IEnumerable<T> collection)
+            : base(collection)
         {
         }
 

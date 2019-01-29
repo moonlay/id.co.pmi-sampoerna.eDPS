@@ -4,7 +4,8 @@ namespace Core.Data.EntityFramework
 {
     public class StorageDbContext : DbContext
     {
-        public StorageDbContext(IOptions<StorageOptions> options) : base(options.Value.NameOrConnectionString)
+        public StorageDbContext(IOptions<StorageOptions> options)
+            : base(options.Value.NameOrConnectionString)
         {
         }
 

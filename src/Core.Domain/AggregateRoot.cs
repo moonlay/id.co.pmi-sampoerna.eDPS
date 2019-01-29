@@ -37,9 +37,9 @@ namespace Core.Domain
 
         protected abstract TAggregateRoot GetEntity();
 
-        public IAuditTrail AuditTrail => ReadModel;
+        public IAuditTrail AuditTrail { get { return ReadModel; } }
 
-        public ISoftDelete SoftDelete => ReadModel;
+        public ISoftDelete SoftDelete { get { return ReadModel; } }
 
         protected override void MarkModified()
         {

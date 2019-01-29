@@ -15,8 +15,8 @@ namespace Core
             Message = message;
         }
 
-        public string Message { get; }
-        public string PropertyName { get; }
+        public string Message { get; private set; }
+        public string PropertyName { get; private set; }
     }
 
     public static class Validator

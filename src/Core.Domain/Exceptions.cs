@@ -21,11 +21,13 @@ namespace Core.Domain
 
     public class DomainNullException : ArgumentNullException
     {
-        public DomainNullException(string paramName) : base(paramName)
+        public DomainNullException(string paramName)
+            : base(paramName)
         {
         }
 
-        public DomainNullException(string paramName, string message) : base(message, paramName)
+        public DomainNullException(string paramName, string message)
+            : base(message, paramName)
         {
         }
     }
