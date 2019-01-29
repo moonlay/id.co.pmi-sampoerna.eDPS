@@ -12,6 +12,6 @@
             Value = System.Activator.CreateInstance<T>();
         }
 
-        public T Value { get; }
+        public T Value { get; private set; }
     }
 }

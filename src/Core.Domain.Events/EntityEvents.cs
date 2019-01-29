@@ -7,7 +7,7 @@
             Entity = entity;
         }
 
-        public T Entity { get; }
+        public T Entity { get; private set; }
     }
 
     public class OnEntityUpdated<T> : IDomainEvent
@@ -17,7 +17,7 @@
             Entity = entity;
         }
 
-        public T Entity { get; }
+        public T Entity { get; private set; }
     }
 
     public class OnEntityDeleted<T> : IDomainEvent
@@ -27,6 +27,6 @@
             Entity = entity;
         }
 
-        public T Entity { get; }
+        public T Entity { get; private set; }
     }
 }

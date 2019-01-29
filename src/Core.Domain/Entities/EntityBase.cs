@@ -7,16 +7,17 @@ namespace Core.Domain
 {
     public abstract class EntityBase<TEntity> : ReadModelBase
     {
-        protected EntityBase(Guid identity) : base(identity)
+        protected EntityBase(Guid identity)
+            : base(identity)
         {
             this.MarkTransient();
 
             this.AddDomainEvent(new OnEntityCreated<TEntity>(GetEntity()));
         }
 
-        public IAuditTrail AuditTrail => this;
+        public IAuditTrail AuditTrail { get { return this; } }
 
-        public ISoftDelete SoftDelete => this;
+        public ISoftDelete SoftDelete { get { return this; } }
 
         protected override void MarkModified()
         {
